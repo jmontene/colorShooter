@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,11 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         
+    }
+
+    protected bool IsTargetWithinRadius(Transform target, float radius)
+    {
+        float distance = Vector2.Distance(target.position, transform.position);
+        return distance < radius;
     }
 }
