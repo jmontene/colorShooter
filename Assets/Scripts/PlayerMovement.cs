@@ -9,21 +9,35 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     Vector2 movement;
+    private ColorChangeController colorChangeController;
+    private Animator animator;
 
-    // Update is called once per frame
-    void Update()
-    {
+    private void Awake() {
+        colorChangeController = GetComponent<ColorChangeController>();
+        animator = GetComponent<Animator>();
+    }
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Z)) {
+            colorChangeController.Change();
+        }
         Movement();
     }
 
-    private void FixedUpdate(){
+    private void FixedUpdate() {
         rb.velocity = movement*movementSpeed;
     }
 
-    void Movement(){
+    void Movement() {
         float movementX = Input.GetAxisRaw("Horizontal");
         float movementY = Input.GetAxisRaw("Vertical");
 
-        movement = new Vector2(movementX, movementY).normalized; 
+        if (movementX != 0 || movementY != 0) {
+            animator.SetFloat("xDir", movementX);
+            animator.SetFloat("yDir", movementY);
+        }
+
+        movement = new Vector2(movementX, movementY).normalized;
+        animator.SetFloat("Speed", movement.magnitude);
     }
 }
