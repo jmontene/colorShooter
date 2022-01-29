@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    protected SpriteFlipper _spriteFlipper;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _spriteFlipper = GetComponent<SpriteFlipper>();
     }
 
     protected bool IsTargetWithinRadius(Transform target, float radius)

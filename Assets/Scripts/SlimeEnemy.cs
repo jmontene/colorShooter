@@ -14,7 +14,14 @@ public class SlimeEnemy : Enemy
     [SerializeField] private float _movementSpeed = 1f;
 
     private bool _isAttacking = false;
+    private Animator _animator = null;
 
+
+    override protected void Awake()
+    {
+        base.Awake();
+        _animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -41,7 +48,10 @@ public class SlimeEnemy : Enemy
         yield return new WaitForSeconds(_attackChargeTime);
 
         var heading = transform.GetDirectionTo(target);
+        _spriteFlipper.CheckFacing(heading.x);
         var finalPosition = transform.position + heading * _attackDistance;
+
+        _animator.SetTrigger("Attack");
 
         yield return transform.DOMove(finalPosition, _attackTime).WaitForCompletion();
 
@@ -53,6 +63,7 @@ public class SlimeEnemy : Enemy
     private void Chase(Transform target)
     {
         var heading = transform.GetDirectionTo(target);
+        _spriteFlipper.CheckFacing(heading.x);
         transform.position = transform.position + heading * _movementSpeed * Time.deltaTime;
     }
 }
