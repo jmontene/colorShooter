@@ -13,7 +13,7 @@ public class Room : MonoBehaviour
     // start, normal, boss
     public string roomType;
 
-    void Initialize(string roomType, bool down, bool left, bool right, bool up){
+    public void Initialize(string roomType, bool down, bool left, bool right, bool up){
         this.roomType = roomType; 
         SetDoors(down, left, right, up);
         DrawDoors();

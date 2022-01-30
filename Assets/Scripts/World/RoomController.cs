@@ -12,10 +12,12 @@ public class RoomController : MonoBehaviour
 
     public List<Room> testRooms;
 
+    public int numColumns, numRows;
+
     // Start is called before the first frame update
     void Start()
     {
-        rooms = new Room[3,4];
+        rooms = new Room[numColumns,numRows];
 
         // Add rooms to array
         foreach (Room room in testRooms)
@@ -23,7 +25,16 @@ public class RoomController : MonoBehaviour
             var x = room.posX;
             var y = room.posY;
             rooms[x,y] = room;
+
+            Debug.Log(room.transform.position.x);
         }
+
+        Room startRoom = rooms[posX,posY];
+
+        Debug.Log(startRoom.transform.position.x);
+        GameObject player = GameObject.Find("Player");
+        player.transform.position = new Vector3(startRoom.transform.position.x, startRoom.transform.position.y, 1);
+        Camera.main.transform.position = startRoom.transform.position;
 
     }
 
