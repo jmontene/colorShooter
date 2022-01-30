@@ -27,7 +27,7 @@ public class Door : MonoBehaviour
      void OnTriggerEnter2D(Collider2D player)
      {
 
-        if (player.gameObject.CompareTag("Player") && !isTriggered)
+        if (player.gameObject.CompareTag("Player"))
         {
             Debug.Log("Entered door"+doorType);
             isTriggered = true;

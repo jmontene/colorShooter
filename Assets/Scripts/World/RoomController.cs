@@ -33,7 +33,7 @@ public class RoomController : MonoBehaviour
         Camera.main.transform.position = nextRoom.transform.position;
         //MovePlayer
         
-        var player = GameObject.Find("Player").transform.position = new Vector3(nextRoom.transform.position.x, nextRoom.transform.position.y, 1);
+        var player = GameObject.Find("Player").transform.position = new Vector3(GameObject.Find("Player").transform.position.x, nextRoom.doorDown.transform.position.y+2.5f, 1);
     }
 
     public void MoveDown(){
@@ -44,7 +44,7 @@ public class RoomController : MonoBehaviour
 
         Debug.Log("moving down");
 
-        var player = GameObject.Find("Player").transform.position = new Vector3(nextRoom.transform.position.x, nextRoom.transform.position.y, 1);
+        var player = GameObject.Find("Player").transform.position = new Vector3(GameObject.Find("Player").transform.position.x, nextRoom.doorUp.transform.position.y-0.5f, 1);
     }
 
     public void MoveLeft(){
@@ -52,7 +52,7 @@ public class RoomController : MonoBehaviour
         var nextRoom = rooms[posX, posY];
         Camera.main.transform.position = nextRoom.transform.position;
 
-        var player = GameObject.Find("Player").transform.position = new Vector3(nextRoom.transform.position.x, nextRoom.transform.position.y, 1);
+        var player = GameObject.Find("Player").transform.position = new Vector3(nextRoom.doorRight.transform.position.x-1.75f, GameObject.Find("Player").transform.position.y, 1);
     }
 
     public void MoveRight(){
@@ -60,7 +60,7 @@ public class RoomController : MonoBehaviour
         var nextRoom = rooms[posX, posY];
         Camera.main.transform.position = nextRoom.transform.position;
 
-        var player = GameObject.Find("Player").transform.position = new Vector3(nextRoom.transform.position.x, nextRoom.transform.position.y, 1);
+        var player = GameObject.Find("Player").transform.position = new Vector3(nextRoom.doorLeft.transform.position.x+1.75f, GameObject.Find("Player").transform.position.y, 1);
         
     }
 
