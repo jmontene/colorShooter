@@ -38,6 +38,12 @@ public class PlayerMovement : MonoBehaviour
     private void CheckBulletInput() {
         if (Input.GetKey(KeyCode.D)) {
             InstantiateBullet(Vector2.right, bulletSpeed);
+        } else if (Input.GetKey(KeyCode.A)) {
+            InstantiateBullet(Vector2.left, bulletSpeed);
+        } else if (Input.GetKey(KeyCode.W)) {
+            InstantiateBullet(Vector2.up, bulletSpeed);
+        } else if (Input.GetKey(KeyCode.S)) {
+            InstantiateBullet(Vector2.down, bulletSpeed);
         }
     }
 
