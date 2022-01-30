@@ -6,11 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float movementSpeed;
+    public float bulletSpeed = 1f;
+    public float bulletWaitTime = 0.5f;
     public Rigidbody2D rb;
+    public Bullet bulletPrefab;
 
     Vector2 movement;
     private ColorChangeController colorChangeController;
     private Animator animator;
+    private bool isBulletOnCooldown = false;
 
     private void Awake() {
         colorChangeController = GetComponent<ColorChangeController>();
@@ -18,14 +22,37 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Z)) {
+        if (Input.GetKeyDown(KeyCode.Q)) {
             colorChangeController.Change();
+        }
+        if (!colorChangeController.IsChanging()) {
+            CheckBulletInput();
         }
         Movement();
     }
 
     private void FixedUpdate() {
         rb.velocity = movement*movementSpeed;
+    }
+
+    private void CheckBulletInput() {
+        if (Input.GetKey(KeyCode.D)) {
+            InstantiateBullet(Vector2.right, bulletSpeed);
+        }
+    }
+
+    private void InstantiateBullet(Vector2 dir, float speed) {
+        if (isBulletOnCooldown) return;
+        Bullet bullet = Instantiate<Bullet>(bulletPrefab, transform.position, Quaternion.identity);
+        bullet.moveDirection = dir;
+        bullet.speed = speed;
+        StartCoroutine(bulletCooldown());
+    }
+
+    private IEnumerator bulletCooldown() {
+        isBulletOnCooldown = true;
+        yield return new WaitForSeconds(bulletWaitTime);
+        isBulletOnCooldown = false;
     }
 
     void Movement() {

@@ -25,6 +25,10 @@ public class ColorChangeController : MonoBehaviour
         }
     }
 
+    public bool IsChanging() {
+        return changing;
+    }
+
     private IEnumerator ChangeCo() {
         changing = true;
         animator.SetBool("Transforming", true);
