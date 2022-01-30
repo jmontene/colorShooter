@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -76,9 +76,705 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: atlas_rangedmonster_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1841
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dbdd1bcfb5b5c64ca3a8138fb716647
+      internalID: 926494329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_1
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1841
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d690297b3e5d21442bdd5c191c3dd215
+      internalID: 900219857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_2
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1841
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271275dfd78b5084fbf62503337a52c4
+      internalID: -1363653161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_3
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1841
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5dc417abbbbfe940abdbee899e83348
+      internalID: 149489917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1634
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbdde2752e9b74449c47c092ef0a201
+      internalID: 1985389039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_5
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1634
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244747214076f964c8db783adf92eb70
+      internalID: 627737663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_6
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1634
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7e2f06c34d1c54ba77787b6c15a1c1
+      internalID: -221142828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_7
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1634
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb40a4ae2d9e1149b29c6c47af18eeb
+      internalID: 74424801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1427
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb5059890fa8394486133603ff9373e
+      internalID: -2043902293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_9
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1427
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1178ff94aa7e3934ab414dd140945360
+      internalID: -412212615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_10
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1427
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5deeae79dbae2ba42a20e2946c46b2a9
+      internalID: 1861484032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_11
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1427
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064c0af6eef1fb2408a0ca23cc7e0fb8
+      internalID: -917441934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1220
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9c1e83ff9f33140b377080c24c2ac0
+      internalID: -1668055755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_13
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1220
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a539a2ef2d601ac4189261b1fdf2e445
+      internalID: -1595310446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_14
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1220
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72486554fad7ced4c8c590e70aaa6684
+      internalID: 587862536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_15
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1220
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd8ef56dfbdf484dae216682df7a408
+      internalID: -226019112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1013
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a3a26c9587d4e3459a171e61a7827ea
+      internalID: -1465670893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_17
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1013
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e997b5368939b964f90faf251ae499e8
+      internalID: 1691644388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_18
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1013
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8faaab79228cf4f81c24d14ae8ee53
+      internalID: -1551586641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_19
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1013
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8506b3387c58beb4685bb6ae993ad7e6
+      internalID: -158142680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 806
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b72039ed2bcbf4bb50a923fc4206bb
+      internalID: 2130699443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_21
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 806
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573f37ca2dfc0f24a9fac7b1e85a6155
+      internalID: 1095551415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_22
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 806
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905038a33aea4d54d9f216f00ba020a3
+      internalID: -2006713641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_23
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 806
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8d10bc9d9800043b452ad881978131
+      internalID: -1893744562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 599
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4c5c42c4e96d74896dccb029e59490
+      internalID: 1075851241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_25
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 599
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3658c5b4d108748b2b0295e0db5039
+      internalID: -126971974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_26
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 599
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cace26aeba59af4ea3bf48c2cab9dc1
+      internalID: 86652269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_27
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 599
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950f0d17b98e08c47beec0bd370fcbe9
+      internalID: -901362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 392
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd552127fcee10d45a652bbc42ab9419
+      internalID: -1931305925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_29
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 392
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6149223729bfed440aabbe8cfe6f7231
+      internalID: 160521571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_30
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 392
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6dddc9a84cb204296a99f1593d4102
+      internalID: 246653464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atlas_rangedmonster_31
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 392
+        width: 370
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c1f87e317fd91499883825671e700c
+      internalID: -1839591848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +785,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_rangedmonster_13: -1595310446
+      atlas_rangedmonster_24: 1075851241
+      atlas_rangedmonster_12: -1668055755
+      atlas_rangedmonster_21: 1095551415
+      atlas_rangedmonster_6: -221142828
+      atlas_rangedmonster_18: -1551586641
+      atlas_rangedmonster_8: -2043902293
+      atlas_rangedmonster_11: -917441934
+      atlas_rangedmonster_20: 2130699443
+      atlas_rangedmonster_15: -226019112
+      atlas_rangedmonster_30: 246653464
+      atlas_rangedmonster_3: 149489917
+      atlas_rangedmonster_9: -412212615
+      atlas_rangedmonster_1: 900219857
+      atlas_rangedmonster_14: 587862536
+      atlas_rangedmonster_23: -1893744562
+      atlas_rangedmonster_26: 86652269
+      atlas_rangedmonster_4: 1985389039
+      atlas_rangedmonster_27: -901362
+      atlas_rangedmonster_22: -2006713641
+      atlas_rangedmonster_29: 160521571
+      atlas_rangedmonster_31: -1839591848
+      atlas_rangedmonster_2: -1363653161
+      atlas_rangedmonster_7: 74424801
+      atlas_rangedmonster_16: -1465670893
+      atlas_rangedmonster_17: 1691644388
+      atlas_rangedmonster_28: -1931305925
+      atlas_rangedmonster_25: -126971974
+      atlas_rangedmonster_5: 627737663
+      atlas_rangedmonster_10: 1861484032
+      atlas_rangedmonster_19: -158142680
+      atlas_rangedmonster_0: 926494329
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

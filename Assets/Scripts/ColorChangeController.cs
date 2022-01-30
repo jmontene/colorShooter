@@ -41,7 +41,7 @@ public class ColorChangeController : MonoBehaviour
         SetLayerWeight();
     }
 
-    private void SetLayerWeight()
+    public void SetLayerWeight()
     {
         animator.SetLayerWeight(whiteLayerIndex, isPink ? 0f : 1f);
         animator.SetLayerWeight(pinkLayerIndex, isPink ? 1f : 0f);

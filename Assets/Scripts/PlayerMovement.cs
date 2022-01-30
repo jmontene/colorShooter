@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private bool isBulletOnCooldown = false;
 
+    public Room currentRoom;
+
     private void Awake() {
         colorChangeController = GetComponent<ColorChangeController>();
         animator = GetComponent<Animator>();

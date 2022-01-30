@@ -15,30 +15,31 @@ public class SlimeEnemy : Enemy
 
     private bool _isAttacking = false;
     private Animator _animator = null;
-
+    private Rigidbody2D _rigidbody2D = null;
 
     override protected void Awake()
     {
         base.Awake();
         _animator = GetComponent<Animator>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (_isAttacking) return;
+        var target = GameManager.Instance.Player;
 
-        var target = GameManager.Instance.Player.transform;
+        if (_isAttacking || target.currentRoom != room) return;
 
-        if (!IsTargetWithinRadius(target, _chaseRadius)) return;
+        if (!IsTargetWithinRadius(target.transform, _chaseRadius)) return;
 
-        if (IsTargetWithinRadius(target, _attackRadius))
+        if (IsTargetWithinRadius(target.transform, _attackRadius))
         {
-            StartCoroutine(Attack(target));
+            StartCoroutine(Attack(target.transform));
             return;
         }
 
-        Chase(target);
+        Chase(target.transform);
     }
 
     private IEnumerator Attack(Transform target)
@@ -53,7 +54,7 @@ public class SlimeEnemy : Enemy
 
         _animator.SetTrigger("Attack");
 
-        yield return transform.DOMove(finalPosition, _attackTime).WaitForCompletion();
+        yield return _rigidbody2D.DOMove(finalPosition, _attackTime).WaitForCompletion();
 
         yield return new WaitForSeconds(_attackCooldown);
 
@@ -64,6 +65,8 @@ public class SlimeEnemy : Enemy
     {
         var heading = transform.GetDirectionTo(target);
         _spriteFlipper.CheckFacing(heading.x);
-        transform.position = transform.position + heading * _movementSpeed * Time.deltaTime;
+
+        var finalPosition = transform.position + heading * _movementSpeed * Time.fixedDeltaTime;
+        _rigidbody2D.MovePosition(finalPosition);
     }
 }

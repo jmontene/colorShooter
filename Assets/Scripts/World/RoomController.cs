@@ -14,6 +14,8 @@ public class RoomController : MonoBehaviour
 
     public int numColumns, numRows;
 
+    private PlayerMovement player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,9 @@ public class RoomController : MonoBehaviour
         Room startRoom = rooms[posX,posY];
 
         Debug.Log(startRoom.transform.position.x);
-        GameObject player = GameObject.Find("Player");
+
+        player = GameObject.FindObjectOfType<PlayerMovement>();
+        player.currentRoom = startRoom;
         player.transform.position = new Vector3(startRoom.transform.position.x, startRoom.transform.position.y, 1);
         Camera.main.transform.position = startRoom.transform.position;
 
@@ -56,6 +60,7 @@ public class RoomController : MonoBehaviour
         Debug.Log("moving down");
 
         var player = GameObject.Find("Player").transform.position = new Vector3(GameObject.Find("Player").transform.position.x, nextRoom.doorUp.transform.position.y-0.5f, 1);
+        UpdateCurrentRoom();
     }
 
     public void MoveLeft(){
@@ -64,6 +69,7 @@ public class RoomController : MonoBehaviour
         Camera.main.transform.position = nextRoom.transform.position;
 
         var player = GameObject.Find("Player").transform.position = new Vector3(nextRoom.doorRight.transform.position.x-1.75f, GameObject.Find("Player").transform.position.y, 1);
+        UpdateCurrentRoom();
     }
 
     public void MoveRight(){
@@ -72,12 +78,16 @@ public class RoomController : MonoBehaviour
         Camera.main.transform.position = nextRoom.transform.position;
 
         var player = GameObject.Find("Player").transform.position = new Vector3(nextRoom.doorLeft.transform.position.x+1.75f, GameObject.Find("Player").transform.position.y, 1);
-        
+        UpdateCurrentRoom();
     }
 
-    // Update is called once per frame
-    void Update()
+    public Room GetCurrentRoom()
     {
-        
+        return rooms[posX, posY];
+    }
+
+    private void UpdateCurrentRoom()
+    {
+        player.currentRoom = GetCurrentRoom();
     }
 }

@@ -8,9 +8,9 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get { return _instance; } }
 
-    [SerializeField] private GameObject _player;
+    [SerializeField] private PlayerMovement _player;
 
-    public GameObject Player { get { return _player;} }
+    public PlayerMovement Player { get { return _player;} }
 
 
     // Start is called before the first frame update

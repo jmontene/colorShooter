@@ -6,6 +6,10 @@ public class Enemy : MonoBehaviour
 {
     protected SpriteFlipper _spriteFlipper;
 
+    public ColorChangeController _colorChange;
+
+    public Room room;
+
     // Start is called before the first frame update
     protected virtual void Awake()
     {
