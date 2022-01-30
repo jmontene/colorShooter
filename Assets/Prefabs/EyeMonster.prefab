@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 593152187010013799}
   - component: {fileID: 593152187010013792}
   - component: {fileID: 7455012432561237187}
+  - component: {fileID: 8134374888711790793}
   m_Layer: 0
   m_Name: EyeMonster
   m_TagString: Untagged
@@ -120,7 +121,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.24}
@@ -182,9 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25811002317db544480ceec5218b4611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transformationTime: 0
-  changing: 0
   isPink: 1
+  changing: 0
+  transformationTime: 0
 --- !u!50 &7455012432561237187
 Rigidbody2D:
   serializedVersion: 4
@@ -206,3 +207,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8134374888711790793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593152187010013593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d764b0a1dae444b825e8fcb06f7ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  invulnerableTime: 3
+  damageBlinkFreq: 0.1
+  _currentInvulnerableTime: 0

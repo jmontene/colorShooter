@@ -29,7 +29,7 @@ public class SlimeEnemy : Enemy
     {
         var target = GameManager.Instance.Player;
 
-        if (_isAttacking || target.currentRoom != room) return;
+        if (target == null || _isAttacking || target.currentRoom != room) return;
 
         if (!IsTargetWithinRadius(target.transform, _chaseRadius)) return;
 
@@ -47,6 +47,8 @@ public class SlimeEnemy : Enemy
         _isAttacking = true;
 
         yield return new WaitForSeconds(_attackChargeTime);
+
+        if (target == null) yield break;
 
         var heading = transform.GetDirectionTo(target);
         _spriteFlipper.CheckFacing(heading.x);

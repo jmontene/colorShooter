@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8208273988940919242, guid: e6a1eae966aa8ef4abcfea3f6db05795, type: 3}
+      propertyPath: bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8208273988940919245, guid: e6a1eae966aa8ef4abcfea3f6db05795, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -189,7 +193,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8208273988940919242, guid: e6a1eae966aa8ef4abcfea3f6db05795, type: 3}
   m_PrefabInstance: {fileID: 45811638}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 554027520}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe56cb5c3eb684743937be58cfcdd454, type: 3}
@@ -245,6 +249,27 @@ MonoBehaviour:
   testRooms: []
   numColumns: 0
   numRows: 0
+--- !u!1 &554027520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8208273988940919246, guid: e6a1eae966aa8ef4abcfea3f6db05795, type: 3}
+  m_PrefabInstance: {fileID: 45811638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &554027527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554027520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d764b0a1dae444b825e8fcb06f7ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  invulnerableTime: 3
+  damageBlinkFreq: 0.1
+  _currentInvulnerableTime: 0
 --- !u!1 &856511644
 GameObject:
   m_ObjectHideFlags: 0

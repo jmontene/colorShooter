@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorChangeController : MonoBehaviour
+public class ColorChangeController : BaseColorChangeController
 {
     public float transformationTime = 0.1f;
 
     private Animator animator;
-    public bool changing;
-    public bool isPink = true;
-
+    
     private int whiteLayerIndex;
     private int pinkLayerIndex;
 
@@ -21,14 +19,10 @@ public class ColorChangeController : MonoBehaviour
         SetLayerWeight();
     }
 
-    public void Change() {
+    public override void Change() {
         if (!changing) {
             StartCoroutine(ChangeCo());
         }
-    }
-
-    public bool IsChanging() {
-        return changing;
     }
 
     private IEnumerator ChangeCo() {
@@ -38,6 +32,12 @@ public class ColorChangeController : MonoBehaviour
         changing = false;
         animator.SetBool("Transforming", false);
         isPink = !isPink;
+        SetLayerWeight();
+    }
+
+    public override void UpdateColor(bool isPink)
+    {
+        this.isPink = isPink;
         SetLayerWeight();
     }
 

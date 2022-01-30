@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public float speed = 1f;
     public Vector2 moveDirection = Vector2.zero;
     public float timeToLive = 5f;
+    public GameObject owner;
     
     private Rigidbody2D rb;
 

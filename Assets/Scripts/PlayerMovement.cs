@@ -14,12 +14,14 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     private ColorChangeController colorChangeController;
     private Animator animator;
+    private Health health;
     private bool isBulletOnCooldown = false;
 
     public Room currentRoom;
 
     private void Awake() {
         colorChangeController = GetComponent<ColorChangeController>();
+        health = GetComponent<Health>();
         animator = GetComponent<Animator>();
     }
 
@@ -52,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
     private void InstantiateBullet(Vector2 dir, float speed) {
         if (isBulletOnCooldown) return;
         Bullet bullet = Instantiate<Bullet>(bulletPrefab, transform.position, Quaternion.identity);
+        bullet.GetComponent<BaseColorChangeController>().UpdateColor(colorChangeController.isPink);
+        bullet.owner = gameObject;
         bullet.moveDirection = dir;
         bullet.speed = speed;
         StartCoroutine(bulletCooldown());
@@ -74,5 +78,14 @@ public class PlayerMovement : MonoBehaviour
 
         movement = new Vector2(movementX, movementY).normalized;
         animator.SetFloat("Speed", movement.magnitude);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out Enemy enemy) && 
+            enemy._colorChange.isPink == colorChangeController.isPink)
+        {
+            health.TakeDamage();
+        }
     }
 }
