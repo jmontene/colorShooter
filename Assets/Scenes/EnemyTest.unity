@@ -204,8 +204,9 @@ GameObject:
   - component: {fileID: 116622850}
   - component: {fileID: 116622849}
   - component: {fileID: 116622851}
+  - component: {fileID: 116622852}
   m_Layer: 0
-  m_Name: atlas_meleemonster_4
+  m_Name: EyeMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,6 +357,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isFacingRight: 1
+--- !u!114 &116622852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116622845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25811002317db544480ceec5218b4611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformationTime: 0
+  changing: 0
+  isPink: 0
 --- !u!1 &186025537
 GameObject:
   m_ObjectHideFlags: 0

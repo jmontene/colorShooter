@@ -7,16 +7,18 @@ public class ColorChangeController : MonoBehaviour
     public float transformationTime = 0.1f;
 
     private Animator animator;
-    private bool changing;
-    private bool isPink;
+    public bool changing;
+    public bool isPink = true;
 
     private int whiteLayerIndex;
+    private int pinkLayerIndex;
 
     void Awake() {
         animator = GetComponent<Animator>();
         changing = false;
-        isPink = true;
         whiteLayerIndex = animator.GetLayerIndex("White");
+        pinkLayerIndex = animator.GetLayerIndex("Pink");
+        SetLayerWeight();
     }
 
     public void Change() {
@@ -36,6 +38,12 @@ public class ColorChangeController : MonoBehaviour
         changing = false;
         animator.SetBool("Transforming", false);
         isPink = !isPink;
+        SetLayerWeight();
+    }
+
+    private void SetLayerWeight()
+    {
         animator.SetLayerWeight(whiteLayerIndex, isPink ? 0f : 1f);
+        animator.SetLayerWeight(pinkLayerIndex, isPink ? 1f : 0f);
     }
 }
